@@ -1,0 +1,60 @@
+package managment 
+ -PACKAGE MANAGER
+	APT(advance package tool): UBUNTU, DEBIAN(kernal type) BASED
+	sudo apt update: fetch the information of all packages.
+
+	sudo apt list --upgradable:				  list of all upgradeable packages
+	sudo apt list --upgradable | grep package name		  list of all upgradeable packages for specefic package
+	-- (switch)
+	sudo apt list --installed: list of all installed packages
+	/etc/apt/sources.list: path of source where all packages information installed .
+	info about commands: man <command name>
+			   :  wget --help
+	sudo apt install <packagename> : to install ne package
+	sudo apt install <packagename1> <packagename2> ........ : to install multiple packages
+
+	switch: -y
+	sudo apt upgrade: upgrade all install packages
+	apt show wget: details of package
+
+	sudo apt search 
+	sudo apt remove <packagename>
+	sudo apt auto remove: auto remove unused package
+	This is commonly done after uninstalling a package or after upgrading packages and can sometimes help in reducing disk space (and clutter).
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	YUM: redhat, centos(open source).
+
+
+
+-package management:
+	- packages info update
+	- upgrade packages
+	- package list
+	- install
+	- remove
+	- search
+-service management(system d):
+-process management:
+-resources management:
+-ssh
+-bash scripting
+-system path
+-environmental variables
+https://docs.docker.com/engine/install/ubuntu/

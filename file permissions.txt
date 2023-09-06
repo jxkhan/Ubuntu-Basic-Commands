@@ -1,0 +1,12 @@
+File permissions:
+useradd username-					// add new user
+su username-						// switch user
+sudo chown username file/directory name			// change owner
+chgrp <groupname> <file or directory>			// change group
+sudo chown <newowner>:<newgroup> <file or directory>    // add new group
+sudo groupadd <groupname>				// new group
+getent group
+getent group | grep <groupname>				// for confirmation new group add
+sudo usermod -a -G <groupname> <username>		// add existing user in existing folder
+sudo gpasswd -d <username> <groupname>-			// delete a user from group	
+sudo groupmems -p -g <groupname>			// 	

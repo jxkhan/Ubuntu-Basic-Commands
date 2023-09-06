@@ -1,0 +1,185 @@
+Commands in Linux:
+file-management
+
+1) ~ (tilde): Home Directory of current user.
+
+2) PWD (print working directory)   : Absoulute / Current Path
+
+3) '/'  : Root/ Base Path
+
+4)CD     : The cd command stands for change directory; with this, you can change your location and move to another directory.
+
+5) '.'   : Current Directory
+
+6) '..'  : Previous Directory
+
+7) TOUCH : File creating-There are multiple ways of creating new files in the Linux terminal. The cat command you saw above can also create new files.
+
+8) MKDIR : 	Make new directory-While there is no specific command for creating new files, 
+		there is a dedicated command for making new folders (or directories, as we call them in Linux
+
+9) ls	 : list of files and folders
+   ls -l : 	You can use the long listing option ls -l to see details like file size, permission, 
+		modified time, etc. You can sort and control these options if you want to.
+
+10) rm	 : delete-You use the rm (short for remove) command to delete files in the Linux terminal.s
+
+11) rm -r or rmdir : delete directory
+
+12) cp	 : 	 copy-Copying files and folders in the command line is also one of the common tasks you will encounter.
+		 The cp command, short for copy, is used for this purpose.
+
+13) cp -r : copy directory
+
+14) nano and vim : editor
+
+15) cat	: file data
+
+16) mv	: moveThe mv command stands for ‘move’. When you copy a file to another location, it remains in its original place.
+
+	The mv command moves the files and folders to the other location. You can think of it as a cut-paste operation.
+
+17) grep: Searching
+
+18) wc word count: tells the total words in your file. e.g. wc -l file name
+
+
+
+
+
+head : for read data from start of the file
+	head filename
+tail: for reading data from bottom of the file
+	tail file_name
+
+tail -f: for seeing live changes of file
+
+ll -l:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+User add File permission + Owner ships:
+
+how to create a non-root user?
+
+useradd command:  useradd username
+passwd username: to set password for user
+user mode: sudo usermod -g groupname new_user
+
+
+how to Login as non-root user in terminal:
+su username
+
+how to check which user owns the directory and other information about directory or file:
+ls -l
+
+how to change owner of the file:
+sudo chown username file/directory name
+
+How to Change a File’s Group Setting on Linux
+If you are the owner of a file, you can change its group settings to any existing group. If you are not the owner, you will need root or sudo privileges.
+
+
+
+chgrp <groupname> <file or directory>
+
+How to Change a File’s Owner and Group at the Same Time
+If you need to modify both the owner and group settings of a file or directory,
+ you can do so with a single command. Since it involves changing the owner, you will need to have superuser privileges.
+
+sudo chown <newowner>:<newgroup> <file or directory>
+
+
+To add a new group to the system, use the groupadd command.
+sudo groupadd <groupname>
+
+To make sure your group has been created, you can use the getent command to list all groups or combine it with grep to look for a specific group.
+getent group
+getent group | grep <groupname>
+
+
+
+How to Add a User to a Group on Linux
+Adding a user to a group is accomplished with the usermod command. Again, you will need superuser privileges, 
+and both the user and the group must already exist. The following command will add a user to a group:
+
+sudo usermod -a -G <groupname> <username>
+
+
+The -a switch in the command above stands for append and is important. If you add a user to a group without using the -a flag, the user will be removed from any other groups that they may already be part of. 
+The -G flag signifies that you want to add the user to the group name following the switch.
+
+
+How to Remove a User From a Group
+Removing a user from a group is done with the gpasswd command. Enter the command (using sudo) in the following format.
+
+sudo gpasswd -d <username> <groupname>
+
+
+How to Remove a Group Using the Linux Terminal
+Finally, the last thing you’ll need to know to manage groups on your system is to remove a group. First, 
+it’s important to note that a group must be empty. If the group you want to remove is small, you can use the command above to manually remove each member.
+
+If the group has more than just a handful of members and you need to remove them before deleting the group, 
+you can remove them all at once with the groupmems command. Enter the command with the following format to remove all users from a specific group:
+
+sudo groupmems -p -g <groupname>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+
+chmod: chmod o+r -R foldername, chmod o-r -R foldername,
+
+chmod u+rwx -R directory_name
+chmod g+wx -R directory_name
+chmod o+wx -R directory_name
+chmod u-rwx -R directory_name
+chmod g-rwx -R directory_name
+chmod o-rwx -R directory_name
+chmod u-w -R directory_name
+ss
+sudo chown mohsin:mohsin -R exercise^C
+
+sudo chmod username -R file/directory
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+ 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		 
+				
